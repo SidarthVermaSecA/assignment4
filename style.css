@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Mono", monospace;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    overflow-x: hidden;
+}
+
+*::selection{
+    color: rgb(255, 255, 0);
+    background-color: rgb(92, 0, 128);
+}
+
+
+header{
+    position: relative;
+    border-radius: 0px 0px 15px 15px ;
+    width: 90%;
+    animation: header 2.2s forwards;
+    padding: 50px 0px 50px 0px;
+    font-size: xx-large;
+    margin: 0 auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(245, 204, 244, 0.343);
+    margin-bottom: 70px;
+    backdrop-filter: blur(20px);
+    color: white;
+}
+
+@keyframes header{
+    from {
+        top: -200px;
+    }
+    to{
+        top: 0px;
+    }
+}
+
+.home-page, .products-page{
+    height:70%;
+    border-radius:15px ;
+    width: 90%;
+    animation: header 2.2s forwards;
+    font-size: xx-large;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(245, 204, 244, 0.343);
+    backdrop-filter: blur(20px);
+    color: white;
+    flex-wrap: wrap;
+}
+
+.section1, .section2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://images.unsplash.com/photo-1655392698483-7360a36e59bd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover; 
+}
+
+.section2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://images.unsplash.com/photo-1656066834927-5c1e3f5d6fe9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+}
+
+nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 10%;
+    width: 100%;
+    animation: navigation 3s ease-in-out 1 running;
+    top: 3%;
+}
+nav .myList{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(20px);
+    color: white;
+    list-style-type: none;
+    box-shadow: 0px 10px 20px rgba(245, 204, 244, 0.343);
+    margin: 70px;
+    border-radius: 20px;
+    font-size: 24px;
+}
+
+.myList li{
+    transition: all 0.1s ease-in-out;
+}
+
+a{
+    color: white !important; 
+    padding: 10px;
+    text-decoration: none;
+    scale: 1.1;
+}
+.d-block{
+    margin: 0 auto;
+}
+.myList a:hover{
+    color: black !important; 
+    background-color: white; 
+    border-radius: 10px;
+ 
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: black;
+    border-radius: 10px;
+}
+@keyframes navigation{
+    0%{
+        left: -1000px;
+    }
+    50%{
+        left: 50px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+
+.tickets{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.text-home{
+    cursor: pointer;
+    min-height: 80%;
+    height: auto;
+    width: 45%;
+    border-radius: 25px;
+}
+
+.picture-home {
+    position: relative;
+    min-height: 80%;
+    height: 80%;
+    width: 45%;
+    border-radius: 25px;
+    overflow: hidden; /* Keep content within rounded corners */
+    background-image: url('images/singer1.png'); /* Update this to match your image path */
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.915) inset;
+}
+
+
+.text-home, .product-text{
+    font-size: 82px;
+}
+
+.text-home, p {
+    margin: 20px;
+}
+
+@media  (max-width: 768px) {
+   .text-home, .picture-home{
+    width:80%;
+    margin: 50px;
+    font-size: clamp(10px, 44px, 50px);
+   }
+   .home-page{
+    height: clamp(70%, 100%, 100%);
+   }
+   .img, .product-picture, nav{
+    display: none;
+   }
+}
+
+footer{
+    text-align: center;
+    background-color: white;
+    height: 4%;
+    color: black;
+}
+
+.products-page{
+    height: 80%;
+    backdrop-filter: blur(5px);
+}
+.product-picture{
+    background-image: url(images/singer2.png);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 20px 20px #161817 inset;
+}
+.product-text, .product-picture{
+    height: 80%;
+    width: 45%;
+    border-radius: 25px;
+}
